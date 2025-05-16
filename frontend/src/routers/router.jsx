@@ -11,7 +11,7 @@ const router = createBrowserRouter ([
                 path: "/",
                 // outline-1 outline-green-400
                 element:  
-                    <h1 className="outline-1 outline-green-400">Home</h1>
+                    <h1 className="">Home</h1>
             },
             {
                 path: "/about",

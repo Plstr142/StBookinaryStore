@@ -107,21 +107,21 @@ function App() {
 export default App;
 
 // ******* Only Home Card Button Footer *******
-{/* <div className="p-8">
-  <Routes>
-    <Route
-      path="/"
-      element={
-        <>
-          <h1 className="mt-6 text-3xl font-bold">Welcome to StBookinary</h1>
-          <p className="mt-2 text-lg">StBookinary shop</p>
+// {/* <div className="p-8">
+//   <Routes>
+//     <Route
+//       path="/"
+//       element={
+//         <>
+//           <h1 className="mt-6 text-3xl font-bold">Welcome to StBookinary</h1>
+//           <p className="mt-2 text-lg">StBookinary shop</p>
 
-          <div className="mt-6 space-y-4 outline-amber-300 border-1"></div>
-        </>
-      }
-    />
-  </Routes>
-</div>; */}
+//           <div className="mt-6 space-y-4 outline-amber-300 border-1"></div>
+//         </>
+//       }
+//     />
+//   </Routes>
+// </div>; */}
 // ******* Only Home Card Button Footer *******
 
 
