@@ -4,7 +4,7 @@ function Button() {
   return (
     <>
       <div className="Btnbox">
-        <button className="button">Click</button>
+        <button className="button">Click a new Button</button>
       </div>
     </>
   );
