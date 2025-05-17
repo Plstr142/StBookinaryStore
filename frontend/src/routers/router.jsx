@@ -1,6 +1,12 @@
 // route เก่า
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App";
+import About from "../pages/About.jsx";
+import Contact from "../pages/Contact.jsx";
+import Home from "../pages/Home.jsx";
+import Fiction from "../pages/Fiction.jsx";
+import NonFiction from "../pages/Nonfiction.jsx";
+import Highlights from "../pages/Highlights.jsx";
 
 const router = createBrowserRouter ([
     {
@@ -10,28 +16,28 @@ const router = createBrowserRouter ([
             {
                 path: "/",
                 // outline-1 outline-green-400
-                element:  
-                    <h1 className="">Home</h1>
+                element: <Home />
             },
             {
                 path: "/about",
-                element: <h1>Home</h1>
+                element: <About />
+
             },
             {
                 path: "/contact",
-                element: <h1>Contact</h1>
+                element: <Contact />
             },
             {
                 path: "/fiction",
-                element: <h1>Fiction</h1>
+                element: <Fiction />
             },
             {
                 path: "/nonfiction",
-                element: <h1>Non-Fiction</h1>
+                element: <NonFiction />
             },
             {
                 path: "/hightlights",
-                element: <h1>Hightlights</h1>
+                element: <Highlights />
             },
         ]
     }

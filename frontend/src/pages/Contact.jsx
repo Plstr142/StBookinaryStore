@@ -1,6 +1,6 @@
 import React from "react";
 
-function Aj() {
+const Contact = () => {
   return (
     <>
       <h1>Contact Us</h1>
@@ -8,4 +8,4 @@ function Aj() {
   );
 }
 
-export default Aj
+export default Contact

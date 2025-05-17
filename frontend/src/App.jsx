@@ -65,7 +65,6 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
 
-  // สลับโหมด dark/light
   useEffect(() => {
     const root = window.document.documentElement;
     if (darkMode) {
@@ -80,7 +79,7 @@ function App() {
   const isHomePage = location.pathname === "/";
 
   const path = location.pathname;
-  const isNotFoundPage = !["/", "/about", "/aj", "/contact"].includes(path);
+  const isNotFoundPage = !["/", "/about", "/contact", "/fiction", "/nonfiction" ,"/hightlights"].includes(path);
 
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen text-black dark:text-white transition-all duration-300">
