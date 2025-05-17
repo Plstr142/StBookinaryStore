@@ -3,7 +3,7 @@ import React from "react";
 const NonFiction = () => {
   return (
     <>
-      <h1>Fiction</h1>
+      <h1>Non Fiction</h1>
     </>
   );
 }

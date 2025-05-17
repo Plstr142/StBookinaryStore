@@ -79,14 +79,14 @@ function App() {
   const isHomePage = location.pathname === "/";
 
   const path = location.pathname;
-  const isNotFoundPage = !["/", "/about", "/contact", "/fiction", "/nonfiction" ,"/hightlights"].includes(path);
+  // const isNotFoundPage = !["/", "/about", "/contact", "/fiction", "/nonfiction" ,"/hightlights"].includes(path);
 
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen text-black dark:text-white transition-all duration-300">
       
-      {!isNotFoundPage && (
+      {/* {!isNotFoundPage && ( */}
         <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      )}
+      {/* )} */}
 
       <main className="min-h-screen max-w-screen-2xl mx-auto px-4 py-6">
         <Outlet />
@@ -94,11 +94,11 @@ function App() {
         <Button />
       </main>
 
-      {!isNotFoundPage && (
+      {/* {!isNotFoundPage && ( */}
         <div className="space-y-4 outline-amber-300 border-1 bg-gray-400">
           <Footer />
         </div>
-      )}
+      {/* )}  */}
     </div>
   );
 }

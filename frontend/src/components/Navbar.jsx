@@ -11,7 +11,7 @@ function Navbar({ toggleDarkMode, darkMode }) {
   return (
     <nav className="bg-gray-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">StBookinary shop</div>
+        <div className="text-2xl font-bold">StBookinary Store</div>
 
         {/* Desktop menu */}
         <ul className="hidden md:flex text-lg items-center gap-6">
