@@ -1,76 +1,126 @@
 import React, { useState } from "react";
-import { Menu, X, Sun, Moon} from "lucide-react";
-import { Link } from "react-router-dom";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { href, Link } from "react-router-dom";
 // import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoSearchOutline, IoTimeSharp } from "react-icons/io5";
 // import { HiOutlineUser } from "react-icons/hi";
 import { FaRegCircleUser } from "react-icons/fa6";
 // import { HiOutlineHeart } from "react-icons/hi";
 import { FiHeart } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
+import avatarImg from "../assets/avatar_user.png";
 
+const navigation = [
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Orders", href: "/orders" },
+  { name: "Cart Page", href: "/cart" },
+  { name: "Check Out", href: "/checkout" },
+];
 
-function Navbar({ toggleDarkMode, darkMode }) {
+const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <header className="max-w-screen-2xl mx-auto px-4 py-6 border-1 border-blue-400 bg-[#bcc4a1]">
-      <nav className="flex justify-between items-center gap-4">
-        {/* left side */}
-          
-        {/* StBookinary Store */}
-        <div className="flex text-2xl font-bold items-center gap-6 md:gap-16">
-          StBookinary Store
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // console.log(isDropdownOpen)
 
-          {/* search input */}
-          <div className="flex relative px-2 py-1 rounded-md sm:w-72 w-40 space-x-2 gap-3 items-center border-2 border-blue-500">
-            <IoSearchOutline className="absolute inline-block left-center inset-y-center text-xl pointer-events-none" />
-            <input maxLength={100} type="text" className="text-start w-full pl-8 text-base truncate oveflow-hidden whitespace-nowrap focus:outline-none py-1 md:px-8 px-6 rounded-md" placeholder="Search here for any book"/>
+  const currentUser = true;
+
+  return (
+    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b border-blue-400 bg-[#bcc4a1]">
+      <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+        {/* LEFT: LOGO + SEARCH */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
+          <span className="text-xl sm:text-2xl font-bold whitespace-nowrap">
+            StBookinary Store
+          </span>
+
+          <div className="relative w-full sm:w-72">
+            <IoSearchOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg pointer-events-none" />
+            <input
+              type="text"
+              maxLength={100}
+              placeholder="Search here for any book"
+              className="pl-10 pr-4 py-1.5 w-full text-sm sm:text-base rounded-md border-2 border-blue-500 truncate overflow-hidden whitespace-nowrap focus:outline-none"
+            />
           </div>
         </div>
 
+        {/* RIGHT: ICONS + DROPDOWN + TOGGLE */}
+        <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-4 w-full sm:w-auto">
+          {/* Avatar + Dropdown */}
+          <div className="relative">
+            {currentUser ? (
+              <>
+                <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                  <img
+                    src={avatarImg}
+                    alt="avatar"
+                    className="w-7 h-7 rounded-full ring-2 ring-black"
+                  />
+                </button>
+                {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                    <ul className="py-2">
+                      {navigation.map((item) => (
+                        <li
+                          key={item.name}
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <Link
+                            to={item.href}
+                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link to="/login">
+                <FaRegCircleUser className="w-6 h-6 cursor-pointer" />
+              </Link>
+            )}
+          </div>
 
-        
-
-        {/* right side */}
-        <div className="flex items-center gap-6">
-          {/* <HiOutlineUser className="w-6 h-6 cursor-pointer" /> */}
-          <FaRegCircleUser className="w-6 h-6 cursor-pointer" />
-          {/* hidden sm:block */}
-          <button className="">
-            {/* <HiOutlineHeart className="w-6 h-6 cursor-pointer" /> */}
+          {/* Favorite */}
+          <button>
             <FiHeart className="w-6 h-6 cursor-pointer" />
-          </button> 
-          
-          <Link to="/cart" className="flex items-center gap-2 bg-[#808570] p-1 sm:px-6 py-2 rounded-sm">
-            <FiShoppingCart className="w-6 h-6" />
-            <span>0</span>
+          </button>
+
+          {/* Cart */}
+          <Link
+            to="/cart"
+            className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-white"
+          >
+            <FiShoppingCart className="w-5 h-5" />
+            <span className="text-sm font-semibold">0</span>
           </Link>
 
-          <ul className="flex text-lg items-center gap-6"> 
-            <li className="flex items-center justify-center px-4 py-2 rounded hover:bg-[#808570] transition">
-              <button
-                onClick={toggleDarkMode}
-                className="hover:text-black"
-                title="Toggle theme"
-              >
-                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            </li>
-          </ul>
-          
-          <Link to="/"><HiMiniBars3BottomRight className="w-6 h-6" /></Link>
-        </div>
+          {/* Theme toggle */}
+          <button
+            onClick={toggleDarkMode}
+            title="Toggle theme"
+            className="p-2 rounded hover:bg-[#808570] transition"
+          >
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
 
-       
+          {/* Menu icon */}
+          <Link to="/" className="block sm:hidden">
+            <HiMiniBars3BottomRight className="w-6 h-6" />
+          </Link>
+        </div>
       </nav>
     </header>
   );
-}
+};
 
 export default Navbar;

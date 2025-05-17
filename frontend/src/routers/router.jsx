@@ -7,6 +7,7 @@ import Home from "../pages/Home.jsx";
 import Fiction from "../pages/Fiction.jsx";
 import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
+import Orders from "../pages/Orders.jsx";
 
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter ([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/orders",
+                element: <Orders />
             },
             {
                 path: "/fiction",
