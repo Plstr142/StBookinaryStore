@@ -1,3 +1,30 @@
-module.exports = {
-  darkMode: "class",
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{css,scss}",
+    "./src/**/*.css",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#FFCE1A",
+        secondary: "#0D0842",
+        blackBG: "#F3F3F3",
+        Favorite: "#FF5841",
+      },
+      fontFamily: {
+        primary: ["Montserrat", "sans-serif"],
+        secondary: ["Nunito Sans", "sans-serif"],
+        third: ["Merriweather", "sans-serif"],
+      },
+    },
+    darkMode: "class",
+  },
+  plugins: [],
 };
+
+// module.exports = {
+//   darkMode: "class",
+// };

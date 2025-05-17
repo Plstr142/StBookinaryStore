@@ -23,60 +23,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merriweather", sans-serif;
+  /* font-family: "Merriweather", sans-serif; */
 }
 
-.card {
-  border: 1px solid #c7c7c770;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #c7c7c770;
-  text-align: center;
-  padding: 20px;
-  margin: 10px;
-  height: 380px;
-  max-width: 260px;
-  background-color: #16939cff;
-  display: inline-block;
-}
-
-.card .card-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  background-color: #d2ffe310;
-  margin-bottom: 10px;
-}
-
-.card .card-title {
-  font-family: "Merriweather", sans-serif;
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
-  background: transparent;
-}
-
-.card .card-desc {
-  font-family: "Merriweather", sans-serif;
-  font-size: 1.25rem;
-  margin: 0;
-  color: #d2ffe3;
-  background: transparent;
-}
-
-/* button */
-.Btnbox {
-  background-color: #cdfddfff;
-}
-
-.button {
-  color: #000;
-}
-
-/* button */
-
-/* header */
-/* header {
-  background-color: black;
-} */
-/* header */
+/* ************************************************* */

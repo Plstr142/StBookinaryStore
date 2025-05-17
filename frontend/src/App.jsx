@@ -55,6 +55,7 @@ import Footer from "./components/Footer.jsx";
 import Button from "./components/Button.jsx";
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
+import "./index.css";
 import React, { useState, useEffect } from "react";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -83,27 +84,30 @@ function App() {
 
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen text-black dark:text-white transition-all duration-300">
+ 
+      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+
+      <Outlet />
+      <Card />
+      <Button />
       
-      {/* {!isNotFoundPage && ( */}
-        <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      {/* )} */}
+      <Footer />
 
-      <main className="min-h-screen max-w-screen-2xl mx-auto px-4 py-6">
-        <Outlet />
-        <Card />
-        <Button />
-      </main>
-
-      {/* {!isNotFoundPage && ( */}
-        <div className="space-y-4 outline-amber-300 border-1 bg-gray-400">
-          <Footer />
-        </div>
-      {/* )}  */}
     </div>
   );
 }
 
 export default App;
+
+// ******* asdsadsadaas *******
+{
+  /* <nav>Navbar</nav>
+<main className="min-h-screen max-w-screen-2xl mx-auto px-4 py-6">
+<Outlet />
+</main>
+<footer>Footer</footer> */
+}
+// ******* asdsadasdsaa *******
 
 // ******* Only Home Card Button Footer *******
 // {/* <div className="p-8">
@@ -123,15 +127,14 @@ export default App;
 // </div>; */}
 // ******* Only Home Card Button Footer *******
 
-
 // ******* route อื่น *******
-      //  {/* หน้า About หรืออื่นๆ */}
-      //     {/* <Route path="/about" element={<About />} /> */}
+//  {/* หน้า About หรืออื่นๆ */}
+//     {/* <Route path="/about" element={<About />} /> */}
 
-      //     {/* เพิ่ม Route อื่นๆ ตามต้องการ */}
-      //     {/* <Route path="/aj" element={<Aj />} />
-      //     <Route path="/contact" element={<Contact />} /> */}
+//     {/* เพิ่ม Route อื่นๆ ตามต้องการ */}
+//     {/* <Route path="/aj" element={<Aj />} />
+//     <Route path="/contact" element={<Contact />} /> */}
 
-      //     {/* หน้าหลุด path ทั้งหมด */}
-      //     {/* <Route path="*" element={<NotFound />} /> */}
+//     {/* หน้าหลุด path ทั้งหมด */}
+//     {/* <Route path="*" element={<NotFound />} /> */}
 // ******* route อื่น *******

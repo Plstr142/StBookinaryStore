@@ -4,5 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  // server: {
+  //   hmr: {
+  //     overlay: true,
+  //   },
+  // },
   plugins: [react(), tailwindcss()],
 });
