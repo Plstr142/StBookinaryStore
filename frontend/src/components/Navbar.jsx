@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react'; // เพิ่ม Sun, Moon
+import React, { useState } from "react";
+import { Menu, X, Sun, Moon} from "lucide-react";
+import { Link } from "react-router-dom";
+import { HiMiniBars3CenterLeft } from "react-icons/hi2";
+import { IoSearchOutline } from "react-icons/io5";
 
 function Navbar({ toggleDarkMode, darkMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,65 +12,44 @@ function Navbar({ toggleDarkMode, darkMode }) {
   };
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">StBookinary Store</div>
+    <header className="max-w-screen-2xl mx-auto px-0 py-0 border-1 border-blue-400 bg-[#bcc4a1]">
+      <nav className="flex justify-between items-center m-6 gap-4">
+        {/* left side */}
+          
+        {/* StBookinary Store */}
+        <div className="flex text-2xl font-bold items-center gap-6">
+          StBookinary Store
 
-        {/* Desktop menu */}
-        <ul className="hidden md:flex text-lg items-center gap-6">
-          <li className='flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition'>
-            <a href="#" className="hover:text-yellow-400">Home</a>
-          </li>
-          <li className='flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition'>
-            <a href="#" className="hover:text-yellow-400">About</a>
-          </li>
-          <li className='flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition'>
-            <a href="#" className="hover:text-yellow-400">Services</a>
-          </li>
-          <li className='flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition'>
-            <a href="#" className="hover:text-yellow-400">Contact</a>
-          </li>
-          <li className='flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition'>
-            <button
-              onClick={toggleDarkMode}
-              className="hover:text-yellow-400"
-              title="Toggle theme"
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-          </li>
-        </ul>
-
-        {/* Hamburger + toggle button (Mobile) */}
-        <div className="md:hidden flex items-center gap-4">
-          <button onClick={toggleDarkMode} title="Toggle theme">
-            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button onClick={toggleMenu}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* search input */}
+          <div className="flex gap-3 items-center border-2 border-blue-500">
+            <IoSearchOutline />
+            <input type="text" className="text-center" placeholder="Search here for any book"/>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <ul className="md:hidden px-4 pb-4 space-y-4 text-lg">
-          <li><a href="#" className="block hover:text-yellow-400">Home</a></li>
-          <li><a href="#" className="block hover:text-yellow-400">About</a></li>
-          <li><a href="#" className="block hover:text-yellow-400">Services</a></li>
-          <li><a href="#" className="block hover:text-yellow-400">Contact</a></li>
-          <li>
-            <button
-              onClick={toggleDarkMode}
-              className="block hover:text-yellow-400"
-              title="Toggle theme"
-            >
-              {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-            </button>
-          </li>
-        </ul>
-      )}
-    </nav>
+
+        
+
+        {/* right side */}
+        <div className="flex items-center gap-6">
+          <ul className="flex text-lg items-center gap-6"> 
+            <li className="flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition">
+              <button
+                onClick={toggleDarkMode}
+                className="hover:text-yellow-400"
+                title="Toggle theme"
+              >
+                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            </li>
+          </ul>
+          
+          <Link to="/"><HiMiniBars3CenterLeft className="w-6 h-6" /></Link>
+        </div>
+
+       
+      </nav>
+    </header>
   );
 }
 
