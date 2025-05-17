@@ -88,6 +88,8 @@ function App() {
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
       <Outlet />
+
+      {/* card , button */}
       <Card />
       <Button />
       

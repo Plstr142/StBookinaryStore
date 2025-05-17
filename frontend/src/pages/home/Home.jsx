@@ -1,11 +1,13 @@
 import React from 'react'
 import Banner from './Banner'
+import TopSales from './TopSales'
 
 const Home = () => {
   return (
-    // border-1 border-yellow-400
+    // border border-yellow-400
     <>
       <Banner />
+      <TopSales />
     </>
   )
 }
