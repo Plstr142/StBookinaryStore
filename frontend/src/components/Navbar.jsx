@@ -47,15 +47,16 @@ function Navbar({ toggleDarkMode, darkMode }) {
             <FiHeart className="w-6 h-6 cursor-pointer" />
           </button> 
           
-          <Link to="/cart">
+          <Link to="/cart" className="flex items-center gap-2 bg-[#808570] p-1 sm:px-6 py-2 rounded-sm">
             <FiShoppingCart className="w-6 h-6" />
+            <span>0</span>
           </Link>
 
           <ul className="flex text-lg items-center gap-6"> 
-            <li className="flex items-center justify-center px-4 py-2 rounded hover:bg-gray-800 transition">
+            <li className="flex items-center justify-center px-4 py-2 rounded hover:bg-[#808570] transition">
               <button
                 onClick={toggleDarkMode}
-                className="hover:text-yellow-400"
+                className="hover:text-black"
                 title="Toggle theme"
               >
                 {darkMode ? <Sun size={20} /> : <Moon size={20} />}
