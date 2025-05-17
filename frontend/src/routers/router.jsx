@@ -3,16 +3,16 @@ import { createBrowserRouter } from "react-router-dom"
 import App from "../App";
 import About from "../pages/About.jsx";
 import Contact from "../pages/Contact.jsx";
-import Home from "../pages/Home.jsx";
+import Home from "../pages/home/Home.jsx";
 import Fiction from "../pages/Fiction.jsx";
 import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
 import Orders from "../pages/Orders.jsx";
-import Banner from "../pages/Banner.jsx";
+import Banner from "../pages/home/Banner.jsx";
 
 
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
@@ -21,10 +21,6 @@ const router = createBrowserRouter ([
                 path: "/",
                 // outline-1 outline-green-400
                 element: <Home />
-            },
-            {
-                path: "/banner",
-                element: <Banner />
             },
             {
                 path: "/about",

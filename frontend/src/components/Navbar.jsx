@@ -31,7 +31,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const currentUser = true;
 
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b border-blue-400 bg-[#bcc4a1]">
+    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-[#bcc4a1]">
       <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
@@ -45,7 +45,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               type="text"
               maxLength={100}
               placeholder="Search here for any book"
-              className="pl-10 pr-4 py-1.5 w-full text-sm sm:text-base rounded-md border-2 border-blue-500 truncate overflow-hidden whitespace-nowrap focus:outline-none"
+              className="pl-10 pr-4 py-1.5 w-full text-sm sm:text-base rounded-md border-[#808570] shadow-lg truncate overflow-hidden whitespace-nowrap focus:outline-none"
             />
           </div>
         </div>
@@ -98,7 +98,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           {/* Cart */}
           <Link
             to="/cart"
-            className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-white"
+            className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-black"
           >
             <FiShoppingCart className="w-5 h-5" />
             <span className="text-sm font-semibold">0</span>

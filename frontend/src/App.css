@@ -100,8 +100,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
+.bton {
+  color: #000;
+}
+
 .btn-primary {
-  background-color: #ffce1a;
+  background-color: #bcc4a1;
   padding: 0.5rem 3rem;
   border-radius: 0.375rem;
   font-size: 1rem;
@@ -112,8 +116,9 @@
 }
 
 .btn-primary:hover {
-  background-color: #0d0842;
-  color: #ffffff;
+  background-color: #808570;
+  /* color: #bcc4a1; */
+  color: #fff;
 }
 
 .swiper-button-prev:after,
