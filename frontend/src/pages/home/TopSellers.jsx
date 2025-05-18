@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const TopSales = () => {
+const TopSellers = () => {
   return (
     <>
       <div
@@ -11,10 +11,10 @@ const TopSales = () => {
             xl:mx-24 xl:my-12
             sm:text-3xl text-2xl font-bold font-primary"
       >
-        TopSales
+        TopSellers
       </div>
     </>
   );
 };
 
-export default TopSales;
+export default TopSellers;

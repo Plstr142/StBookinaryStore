@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from './home/Banner'
-import TopSales from './home/TopSales'
+import TopSales from './home/TopSellers'
 
 const Orders = () => {
   return (
