@@ -87,14 +87,15 @@ function App() {
  
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
+      <main className="min-h-screen max-w-screen-2xl mx-auto px-4 py-6">
       <Outlet />
 
       {/* card , button */}
       <Card />
       <Button />
-      
-      <Footer />
+      </main>
 
+      <Footer />
     </div>
   );
 }

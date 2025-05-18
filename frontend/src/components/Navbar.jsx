@@ -31,7 +31,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const currentUser = true;
 
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-[#bcc4a1]">
+    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
       <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
