@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 // genre
-const categories = ["Choose a genre", "Business", "Fiction", "Horror", "Adventure"]
+const categories = ["Choose a genre", "programming", "fiction", "nonfiction", "maths" , "sport"]
 
 const TopSellers = () => {
 
