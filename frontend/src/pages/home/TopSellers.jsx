@@ -48,7 +48,9 @@ const TopSellers = () => {
 
 
         {
-          
+          filteredBooks.map((book, index) => (
+            <div>{book.title}</div>
+          ))
         }
 
       </div>
