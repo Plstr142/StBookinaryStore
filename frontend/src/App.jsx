@@ -61,6 +61,7 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { Outlet } from "react-router-dom";
+import Orders from "./pages/Orders.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
