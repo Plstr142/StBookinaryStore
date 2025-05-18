@@ -1,7 +1,7 @@
 import React from 'react'
 import UserNameInput from '../../components/UserNameInput.jsx'
-import Banner from './Banner.jsx'
-import TopSellers from './TopSellers.jsx'
+import Banner from './pages/home/Banner.jsx'
+import TopSales from './pages/home/TopSales.jsx'
 
 const Home = () => {
 
@@ -13,7 +13,7 @@ const Home = () => {
     // border border-yellow-400
     <>
       <Banner />
-      <TopSellers />
+      <TopSales />
       
       <UserNameInput />
     </>

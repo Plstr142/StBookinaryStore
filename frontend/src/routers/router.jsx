@@ -8,7 +8,6 @@ import Fiction from "../pages/Fiction.jsx";
 import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
 import Orders from "../pages/Orders.jsx";
-import Banner from "../pages/home/Banner.jsx";
 
 
 

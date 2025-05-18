@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopSellers = () => {
+const TopSales = () => {
   return (
     <>
       <div
@@ -11,10 +11,10 @@ const TopSellers = () => {
             xl:mx-24 xl:my-12
             sm:text-3xl text-2xl font-bold font-primary"
       >
-        TopSellers
+        TopSales
       </div>
     </>
   );
 };
 
-export default TopSellers;
+export default TopSales;
