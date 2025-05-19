@@ -15,9 +15,11 @@ const Recommended = () => {
       .then((data) => setBooks(data));
   }, []);
 
+  console.log(books);
+
   return (
-    <div className="py-10 px-15">
-      <h2 className="text-3xl font-semibold mb-6">Recommended for you</h2>
+    <div className="py-16 px-15">
+      <h2 className="text-3xl font-semibold mb-6">Bestselling New Books</h2>
 
       <Swiper
           slidesPerView={1}
@@ -57,7 +59,7 @@ const Recommended = () => {
           className="mySwiper"
         >
           {
-            books.length > 0 && books.slice(8, 18).map((book, index) => (
+            books.length > 0 && books.slice(5, 10).map((book, index) => (
               <SwiperSlide key={index}>            
                 <BookCard book={book} />
               </SwiperSlide>
