@@ -1,15 +1,15 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import { getImgUrl } from "../../utils/getImgUrl";
 
-
-const BookCard = () => {
+const BookCard = ({book}) => {
   return (
     <div className=" rounded-lg transition-shadow duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72  sm:justify-center gap-4">
         <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
           <a href="/">
             <img
-              src="assets/books/book-1.png"
+              src={`${getImgUrl(book.coverImage)}`}
               alt=""
               className="w-full bg-cover p-2 rounded-md cursor-pointer hover:scale-105 transition-all duration-200"
             />
