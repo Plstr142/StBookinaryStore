@@ -64,7 +64,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                   />
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                  <div className="absolute xs:right-2 md:right-1 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
                     <ul className="py-2">
                       {navigation.map((item) => (
                         <li
