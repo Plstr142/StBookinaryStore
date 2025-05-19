@@ -5,6 +5,8 @@ import { Pagination ,  Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "@/global.css";
+
 
 // genre
 const categories = [
@@ -48,7 +50,7 @@ const TopSellers = () => {
 
 
       {/* ring-teal-200 */}
-      <div className="py-10 bg-gray-100 inset-shadow-sm rounded-md px-5 m-5">
+      <div className="py-10 bg-white shadow-top rounded-lg px-5 m-5">
         <h2 className="text-3xl font-semibold mb-6 dark:text-black">Top Picks This Week</h2>
 
         {/* category filtering */}

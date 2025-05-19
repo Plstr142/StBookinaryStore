@@ -17,7 +17,6 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import "@/global.css";
 
-
 const events = [
   {
     id: 1,
@@ -139,6 +138,47 @@ const Featuredevents = () => {
           </p>
         </div>
       </div>
+
+      {/* Cyberpunk Glow */}
+      {/* <div className="min-h-screen bg-black relative overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 animate-gradient bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-purple-600 opacity-30 blur-3xl" />
+        <div className="relative z-10 p-10 rounded-xl bg-white/10 backdrop-blur-md shadow-xl border border-pink-500/30">
+          <h1 className="text-4xl font-bold text-pink-400 text-center">
+            Cyberpunk Glow
+          </h1>
+        </div>
+      </div> */}
+
+      {/* Liquid Wave */}
+      {/* <div className="relative min-h-screen bg-indigo-900 flex items-center justify-center">
+        <h1 className="text-white text-4xl font-bold z-10">🌊 Liquid Wave</h1>
+        <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
+          <path
+            fill="#4f46e5"
+            fillOpacity="1"
+            d="M0,160L60,170C120,180,240,200,360,208C480,216,600,212,720,197C840,182,960,156,1080,144C1200,132,1320,134,1380,136L1440,138L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          />
+        </svg>
+      </div> */}
+
+      {/*  Noise Background Canvas */}
+      {/* <div className="min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 text-white relative flex items-center justify-center">
+        <div className="relative z-10 text-4xl font-bold">
+          🖌️ Noise Texture + Gradient
+        </div>
+      </div> */}
+
+      {/* Glassmorphism */}
+      {/* <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center p-10">
+        <div className="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 p-10 max-w-md shadow-xl">
+          <h1 className="text-3xl font-bold text-white text-center">
+            🧊 Glassmorphism
+          </h1>
+          <p className="text-white/80 mt-4 text-center">
+            Soft blur, translucent effect.
+          </p>
+        </div>
+      </div> */}
     </>
   );
 };
