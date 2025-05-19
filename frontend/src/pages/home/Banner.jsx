@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import bannerImg from "../../assets/JSGuidelearntoprofessional.png";
 import bannerImg1 from "../../assets/EffectiveJs.png";
-import bannerImg2 from "../../assets/JSjohnduckett.png";
+import bannerImg2 from "../../assets/YouDon'tKnowJS.jpg";
 
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
@@ -46,15 +46,15 @@ const Banner = () => {
           </p> */}
           <div className="flex flex-col md:flex-row-reverse px-15 items-center py-16 gap-12 font-primary text-4xl text-bold">
             <div className="flex md:w-1/2 max-w-fit items-center md:justify-end">
-              <img src={bannerImg1} alt="" className="object-cover w-40" />
+              <img src={bannerImg2} alt="" className="object-cover w-40" />
             </div>
 
             <div className="flex md:w-1/2 max-w-fit items-center md:justify-end">
-              <img src={bannerImg} alt="" className="object-cover w-60" />
+              <img src={bannerImg} alt="" className="object-cover w-45" />
             </div>
 
             <div className="flex md:w-1/2 max-w-fit items-center md:justify-end">
-              <img src={bannerImg2} alt="" className="object-cover w-50" />
+              <img src={bannerImg1} alt="" className="object-cover w-50" />
             </div>
 
             <div className="w-full">
