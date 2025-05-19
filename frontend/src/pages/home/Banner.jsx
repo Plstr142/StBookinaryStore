@@ -20,7 +20,7 @@ const Banner = () => {
           <img src={bannerImg2} alt="" className='object-cover w-50' />
         </div>
 
-        <div className='md:w-1/2 w-full'>
+        <div className='w-full'>
           <h1 className='md:text-3xl text-2xl mb-7 font-bold'>Hot Off the Press</h1>
           <p className='mb-10 text-lg'>Update your reading list to stay on trend with the latest books everyone's talking about! Whether it's a dramatic novel or a thought-provoking documentary, get ready because you won't be able to stop reading!</p>
           <button className='bton btn-primary text-white'>Subscribe</button>

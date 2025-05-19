@@ -31,7 +31,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const currentUser = true;
 
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
+    <header className="max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
       <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
@@ -60,7 +60,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                   <img
                     src={avatarImg}
                     alt="avatar"
-                    className="w-7 h-7 rounded-full ring-2 ring-black"
+                    className="w-7 h-7 rounded-full ring-2 ring-black dark:ring-white cursor-pointer"
                   />
                 </button>
                 {isDropdownOpen && (
@@ -98,7 +98,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           {/* Cart */}
           <Link
             to="/cart"
-            className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-black"
+            className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-black dark:text-white"
           >
             <FiShoppingCart className="w-5 h-5" />
             <span className="text-sm font-semibold">0</span>

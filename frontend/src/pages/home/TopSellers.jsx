@@ -48,8 +48,8 @@ const TopSellers = () => {
 
 
       {/* ring-teal-200 */}
-      <div className="py-10 bg-gray-100 inset-shadow-sm rounded-md px-15">
-        <h2 className="text-3xl font-semibold mb-6">Top Picks This Week</h2>
+      <div className="py-10 bg-gray-100 inset-shadow-sm rounded-md px-5 m-10">
+        <h2 className="text-3xl font-semibold mb-6 dark:text-black">Top Picks This Week</h2>
 
         {/* category filtering */}
         <div className="mb-8 flex items-center">

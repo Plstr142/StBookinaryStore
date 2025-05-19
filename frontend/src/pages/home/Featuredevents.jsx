@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import { Pagination , Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 import events1 from "../../assets/events/news-1.png";
@@ -45,12 +46,13 @@ const events = [
 const Featuredevents = () => {
   return (
     <>
-      <div className="py-16 px-15 bg-[#bcc4a1] border border-transparent rounded-md">
-        <h2 className="text-3xl font-semibold mb-6">Featured Events</h2>
+      <div className="py-16 px-15 bg-[#bcc4a1] border border-transparent rounded-none">
+        <h2 className="text-3xl font-semibold mb-6 text-black dark:white">Featured Events</h2>
 
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
+          navigation={true}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -65,16 +67,16 @@ const Featuredevents = () => {
               spaceBetween: 50,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           className="mySwiper"
         >
           {events.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-12"> 
+              <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-12 bg-[#bcc4a1]"> 
                 {/* content */}
                 <div className="py-4">
                   <Link to={`/events/${item.id}`}>
-                    <h3 className="text-lg font-medium hover:text-blue-500 mb-4">{item.title}</h3>
+                    <h3 className="text-lg font-medium hover:text-blue-500 mb-4 dark:text-black">{item.title}</h3>
                   </Link>
                   <div className="w-8 h-[2px] bg-[#808570] mb-5"></div>
                   <p className="text-sm text-gray-600">{item.description}</p>

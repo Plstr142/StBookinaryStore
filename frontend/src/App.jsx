@@ -84,11 +84,13 @@ function App() {
   // const isNotFoundPage = !["/", "/about", "/contact", "/fiction", "/nonfiction" ,"/hightlights"].includes(path);
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen text-black dark:text-white transition-all duration-300">
+    // min-h-screen
+    <div className="bg-white dark:bg-gray-900 text-black dark:text-white transition-all duration-300">
  
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
-      <main className="min-h-screen max-w-screen-2xl mx-auto px-4 py-6">
+      {/* mx-auto px-4 py-6 */}
+      <main className="min-h-screen max-w-screen">
       <Outlet />
 
       {/* card , button */}

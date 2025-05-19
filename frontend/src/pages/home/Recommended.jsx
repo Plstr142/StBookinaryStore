@@ -18,9 +18,9 @@ const Recommended = () => {
   console.log(books);
 
   return (
-    <div className="py-16 px-15">
-      <h2 className="text-3xl font-semibold mb-6">Bestselling New Books</h2>
-
+    <div className="py-16 px-5 bg-white shadow-md inset-shadow-sm rounded-lg m-10">
+      <h2 className="text-3xl font-semibold mb-6 dark:text-black">Bestselling New Books</h2>
+      
       <Swiper
           slidesPerView={1}
           spaceBetween={30}
