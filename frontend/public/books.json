@@ -62,7 +62,7 @@
   {
     "_id": 7,
     "title": "A Dictionary of Computer Science",
-    "description": "The most up-to-date and accessible guide to computing, this dictionary offers 6,500+ clear, jargon-free definitions—ideal for students, professionals, and anyone using computers.",
+    "description": "The most up to date and accessible guide to computing, this dictionary offers 6,500+ clear, jargon-free definitions—ideal for students, professionals, and anyone using computers.",
     "category": "nonfiction",
     "trending": true,
     "coverImage": "ADictionaryofComputerScience.jpg",
@@ -112,7 +112,7 @@
   {
     "_id": 12,
     "title": "Python Beginner's Guide to Artificial Intelligence",
-    "description": "Master practical AI with real world projects using TensorFlow and Python—build intelligent systems, apply deep learning to real industry challenges, and create smart, scalable solutions with hands on case studies.",
+    "description": "Master practical AI with real world projects using TensorFlow and Python build intelligent systems, apply deep learning to real industry challenges, and create smart, scalable solutions with hands on case studies.",
     "category": "programming",
     "trending": true,
     "coverImage": "PythonBeginner'sGuidetoArtificialIntelligence.jpg",
@@ -142,17 +142,17 @@
   {
     "_id": 15,
     "title": "Machine Learning, revised and updated edition",
-    "description": "This concise MIT Press guide offers an accessible, non-technical introduction to machine learning—covering its evolution, key algorithms, real-world applications, and pressing issues like bias, privacy, and fairness in AI.",
+    "description": "This concise MIT Press guide offers an accessible, non-technical introduction to machine learning—covering its evolution, key algorithms, real world applications, and pressing issues like bias, privacy, and fairness in AI.",
     "category": "nonfiction",
     "trending": false,
-    "coverImage": "book-15.png",
+    "coverImage": "MachineLearningrevisedandupdatededition.jpg",
     "oldPrice": 14.99,
     "newPrice": 15.89
   },
   {
     "_id": 16,
     "title": "Python Advanced Guide to Artificial Intelligence",
-    "description": "Master advanced machine learning and deep learning with TensorFlow and Keras—build, deploy, and scale intelligent models for real-world tasks like image recognition, object detection, and AI driven decision making.",
+    "description": "Master advanced machine learning and deep learning with TensorFlow and Keras build, deploy, and scale intelligent models for real world tasks like image recognition, object detection, and AI driven decision making.",
     "category": "programming",
     "trending": false,
     "coverImage": "PythonAdvancedGuidetoArtificialIntelligence.jpg",
@@ -172,7 +172,7 @@
   {
     "_id": 18,
     "title": "Mastering Node.js Web Development",
-    "description": "Master Node.js by building and deploying high-performance, full-featured server-side applications—learn HTTP handling, RESTful APIs, database integration, authentication, and more with real world examples and practical projects.",
+    "description": "Master Node.js by building and deploying high performance, full featured server-side applications—learn HTTP handling, RESTful APIs, database integration, authentication, and more with real world examples and practical projects.",
     "category": "programming",
     "trending": true,
     "coverImage": "MasteringNodejsWebDevelopment.jpg",
@@ -182,7 +182,7 @@
   {
     "_id": 19,
     "title": "Math Tools",
-    "description": "Bringing maths to life through 500+ real-world applications and 600 illustrations, Math Tools is a visually rich, accessible guide that connects algebra, calculus, and more to fields like science, music, and astronomy ideal for students, teachers, and curious minds alike.",
+    "description": "Bringing maths to life through 500+ real world applications and 600 illustrations, Math Tools is a visually rich, accessible guide that connects algebra, calculus, and more to fields like science, music, and astronomy ideal for students, teachers, and curious minds alike.",
     "category": "maths",
     "trending": true,
     "coverImage": "MathTools.jpg",
@@ -192,7 +192,7 @@
   {
     "_id": 20,
     "title": "Full Stack FastAPI, React, and MongoDB",
-    "description": "Build modern, production-ready web apps with the powerful FARM stack of FastAPI, React, and MongoDB master full stack development, integrate AI like ChatGPT, and future proof your skills with hands on projects and Next.js 14.",
+    "description": "Build modern, production ready web apps with the powerful FARM stack of FastAPI, React, and MongoDB master full stack development, integrate AI like ChatGPT, and future proof your skills with hands on projects and Next.js 14.",
     "category": "programming",
     "trending": false,
     "coverImage": "FullStackFastAPIReactandMongoDB.jpg",
