@@ -1,4 +1,3 @@
-// route เก่า
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App";
 import About from "../pages/About.jsx";
@@ -8,6 +7,8 @@ import Fiction from "../pages/Fiction.jsx";
 import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
 import Orders from "../pages/Orders.jsx";
+import Login from "../components/Login.jsx";
+import Register from "../components/Register.jsx";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
                 path: "/hightlights",
                 element: <Highlights />
             },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Register />
+            }
         ]
     }
 ])

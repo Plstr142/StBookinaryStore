@@ -131,10 +131,10 @@ const Featuredevents = () => {
         {/* Content on top */}
         <div className="relative z-10 p-10 rounded-xl backdrop-blur-md bg-white/10 shadow-xl">
           <h1 className="text-4xl font-bold text-center mb-4">
-            🚀 Cool Animated Gradient
+            Elevate Your Brain with Every Page 🧠
           </h1>
           <p className="text-center text-lg text-white/80">
-            This background moves & glows like a neon light.
+            Find Your Next Obsession Between the Covers
           </p>
         </div>
       </div>

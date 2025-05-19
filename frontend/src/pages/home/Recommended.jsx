@@ -19,7 +19,7 @@ const Recommended = () => {
 
   return (
     <div className="py-16 px-5 bg-white shadow-md inset-shadow-sm rounded-lg m-5">
-      <h2 className="text-3xl font-semibold mb-6 dark:text-black">Bestselling New Books</h2>
+      <h2 className="text-3xl font-semibold mb-6 dark:text-black">New Arrival Books</h2>
       
       <Swiper
           slidesPerView={1}

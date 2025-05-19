@@ -28,7 +28,8 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // console.log(isDropdownOpen)
 
-  const currentUser = true;
+  // false = disable profile (profile user dropdown)
+  const currentUser = false;
 
   return (
     <header className="max-w-screen px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
