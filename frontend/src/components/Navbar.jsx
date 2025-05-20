@@ -30,6 +30,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   const cartItems = useSelector(state => state.cart.cartItems)
+  // console.log(cartItems)
 
   // console.log(isDropdownOpen)
 
@@ -107,7 +108,12 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-black dark:text-white"
           >
             <FiShoppingCart className="w-5 h-5" />
-            <span className="text-sm font-semibold">0</span>
+            {
+           
+            cartItems.length > 0 ? <span className="text-sm font-semibold">{cartItems.length}</span> : null
+            }
+            <span className="text-sm font-semibold">Cart</span>
+
           </Link>
 
           {/* Theme toggle */}
