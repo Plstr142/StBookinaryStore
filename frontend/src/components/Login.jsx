@@ -4,10 +4,22 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 // import '../assets/css/Login.css'
+import { useForm } from "react-hook-form"
 
 
 const Login = () => {
   const [message, setMessage] = useState("")
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
+
+
   return (
     <div className="relative mx-5 my-5">
       <div className="h-[calc(100vh-120px)] flex justify-center items-center border border-green-400">
@@ -16,7 +28,7 @@ const Login = () => {
             Login to StBookinary Store
           </h2>
 
-          <form className="w-full justify-between flex flex-col gap-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full justify-between flex flex-col gap-5">
             <div className="emailform" name="emailform">
               <label
                 className="block text-gray-800 text-sm font-bold mb-2"
@@ -25,6 +37,7 @@ const Login = () => {
                 Email
               </label>
               <input
+                {...register("email", { required: true })}
                 type="email"
                 name="email"
                 id="email"
@@ -42,6 +55,7 @@ const Login = () => {
                 Password
               </label>
               <input
+                {...register("password", { required: true })}
                 type="password"
                 name="password"
                 id="password"
