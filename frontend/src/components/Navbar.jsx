@@ -119,7 +119,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           {/* sm:hidden */}
           <button
             onClick={toggleMenu}
-            className="block md:hidden p-2 rounded hover:bg-[#808570]"
+            className="block lg:block md:hidden p-2 rounded hover:bg-[#808570]"
           >
             {isOpen ? <X size={24} /> : <HiMiniBars3BottomRight size={24} />}
           </button>
@@ -129,7 +129,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
       {/* Mobile Navigation Menu */}
 
       {isOpen && (
-        <div className="md:hidden mt-4 bg-black dark:bg-white shadow-md rounded-lg p-4 w-50 absolute md:right-2 xs:right-1 z-45">
+        <div className="lg:block md:hidden mt-4 bg-black dark:bg-white shadow-md rounded-lg p-4 w-50 absolute md:right-2 xs:right-1 z-45">
           <ul className="space-y-2">
             {navigation.map((item) => (
               <li key={item.name}>
