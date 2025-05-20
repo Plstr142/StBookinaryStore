@@ -15,7 +15,7 @@ const Recommended = () => {
       .then((data) => setBooks(data));
   }, []);
 
-  console.log(books);
+  // console.log(books);
 
   return (
     <div className="py-16 px-5 bg-white shadow-md inset-shadow-sm rounded-lg m-5">
