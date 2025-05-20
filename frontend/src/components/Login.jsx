@@ -19,6 +19,10 @@ const Login = () => {
 
   const onSubmit = (data) => console.log(data)
 
+  const handleGoogleSignIn = () => {
+
+  }
+
 
   return (
     <div className="relative mx-5 my-5">
@@ -90,10 +94,12 @@ const Login = () => {
 
           {/* google sign in */}
           <div className="mx-14 my-4 flex flex-col justify-between gap-2">
-            <button className="w-full flex flex-row flex-wrap gap-1 items-center justifty-center border border-none bg-[#4285F4] hover:bg-[#34A853] text-white font-bold
+            <button 
+              onClick={handleGoogleSignIn}
+              className="w-full flex flex-row flex-wrap gap-1 items-center justifty-center border border-none bg-[#4285F4] hover:bg-[#34A853] text-white font-bold
             py-0 px-4 rounded focus:outline-none hover:text-black">
               <FaGoogle className="m-1 size-6"/>
-              <p className="m-2 font-bold font-roboto text-md">Google</p>
+              <p className="m-2 font-bold font-roboto text-md">Sign in with Google</p>
             </button> 
             <button className="w-full flex flex-row flex-wrap gap-1 items-center justifty-center border border-none bg-black hover:bg-white text-white font-bold
             py-0 px-4 rounded focus:outline-none hover:text-black">

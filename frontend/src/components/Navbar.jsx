@@ -38,7 +38,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
           <span className="text-xl sm:text-2xl font-bold whitespace-nowrap">
-            StBookinary Store
+            <a href="/">StBookinary Store</a>
           </span>
 
           <div className="relative w-full sm:w-72">
