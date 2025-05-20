@@ -1,11 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{css,scss}",
-    "./src/**/*.css",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,css,scss}"],
   theme: {
     extend: {
       colors: {
@@ -19,6 +14,9 @@ export default {
         secondary: ["Nunito Sans", "sans-serif"],
         third: ["Merriweather", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+      },
+      screens: {
+        mobile: { max: "320px" },
       },
     },
     darkMode: "class",

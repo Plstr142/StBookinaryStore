@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+// import '../assets/css/Login.css'
+
 
 const Login = () => {
   const [message, setMessage] = useState("")
   return (
-    <div className="mx-5 my-5">
+    <div className="relative mx-5 my-5">
       <div className="h-[calc(100vh-120px)] flex justify-center items-center border border-green-400">
-        <div className="w-full max-w-sm mx-auto bg-gray-100 shadow-lg rounded px-8 pt-6 pb-8 mb-4 ">
-          <h2 className="text-xl font-semibold mb-4 text-black dark:text-black">
-            Please Login
+        <div className="w-full max-w-lg mx-auto bg-gray-100 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
+          <h2 className="text-2xl font-bold my-6 text-black dark:text-black text-center">
+            Login to StBookinary Store
           </h2>
 
           <form className="w-full justify-between flex flex-col gap-5">
@@ -73,11 +75,11 @@ const Login = () => {
           </p>
 
           {/* google sign in */}
-          <div className="mx-10 my-4 flex flex-col justify-between gap-2">
+          <div className="mx-14 my-4 flex flex-col justify-between gap-2">
             <button className="w-full flex flex-row flex-wrap gap-1 items-center justifty-center border border-none bg-[#4285F4] hover:bg-[#34A853] text-white font-bold
             py-0 px-4 rounded focus:outline-none hover:text-black">
               <FaGoogle className="m-1 size-6"/>
-              <p className="m-2 font-bold font-roboto text-md">Sign in with Google</p>
+              <p className="m-2 font-bold font-roboto text-md">Google</p>
             </button> 
             <button className="w-full flex flex-row flex-wrap gap-1 items-center justifty-center border border-none bg-black hover:bg-white text-white font-bold
             py-0 px-4 rounded focus:outline-none hover:text-black">
