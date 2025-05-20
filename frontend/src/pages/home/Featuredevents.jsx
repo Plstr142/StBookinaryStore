@@ -123,7 +123,7 @@ const Featuredevents = () => {
         </Swiper>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black text-white">
+      <div className="h-100 flex items-center justify-center relative overflow-hidden bg-black text-white">
         {/* Gradient background animated */}
         {/* <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 opacity-70 blur-2xl" /> */}
         <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-r from-[#808570] via-[#000000] to-[#bcc4a1] opacity-70 blur-2xl" />

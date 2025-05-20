@@ -18,6 +18,7 @@ export default {
         primary: ["Montserrat", "sans-serif"],
         secondary: ["Nunito Sans", "sans-serif"],
         third: ["Merriweather", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
     darkMode: "class",
