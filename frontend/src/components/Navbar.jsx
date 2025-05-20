@@ -10,6 +10,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { FiHeart } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import avatarImg from "../assets/avatar_user.png";
+import { useSelector } from "react-redux";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -21,11 +22,14 @@ const navigation = [
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState();
+  
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
+  const cartItems = useSelector(state => state.cart.cartItems)
 
   // console.log(isDropdownOpen)
 
@@ -136,7 +140,8 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                 <Link
                   to={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-gray-100 hover:bg-gray-100 rounded dark:text-black"
+                  // #adadad87
+                  className="block px-4 py-2 text-gray-100 hover:bg-[#808570] rounded dark:text-black"
                 >
                   {item.name}
                 </Link>

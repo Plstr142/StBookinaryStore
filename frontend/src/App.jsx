@@ -85,7 +85,7 @@ function App() {
 
   return (
     // min-h-screen
-    <div className="bg-white dark:bg-gray-900 text-black dark:text-white transition-all duration-300">
+    <div className="bg-white dark:bg-black text-black dark:text-white transition-all duration-300">
  
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
