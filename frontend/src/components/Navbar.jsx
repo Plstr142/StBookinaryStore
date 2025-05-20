@@ -25,7 +25,8 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     setIsOpen(!isOpen);
   };
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState();
+
   // console.log(isDropdownOpen)
 
   // false = disable profile (profile user dropdown)
@@ -114,12 +115,36 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          {/* Menu icon */}
-          <Link to="/" className="block sm:hidden">
-            <HiMiniBars3BottomRight className="w-6 h-6" />
-          </Link>
+          {/* Mobile menu icon */}
+          {/* sm:hidden */}
+          <button
+            onClick={toggleMenu}
+            className="block md:hidden p-2 rounded hover:bg-[#808570]"
+          >
+            {isOpen ? <X size={24} /> : <HiMiniBars3BottomRight size={24} />}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Navigation Menu */}
+
+      {isOpen && (
+        <div className="md:hidden mt-4 bg-black dark:bg-white shadow-md rounded-lg p-4 w-50 absolute md:right-2 xs:right-1 z-45">
+          <ul className="space-y-2">
+            {navigation.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-gray-100 hover:bg-gray-100 rounded dark:text-black"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
