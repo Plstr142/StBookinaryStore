@@ -11,6 +11,8 @@ import { FiHeart } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import avatarImg from "../assets/avatar_user.png";
 import { useSelector } from "react-redux";
+// import { NavLink } from "react-router-dom";
+// import { routeDefs } from "../routers/showRoutes";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -22,14 +24,13 @@ const navigation = [
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-  const cartItems = useSelector(state => state.cart.cartItems)
+
+  const cartItems = useSelector((state) => state.cart.cartItems);
   // console.log(cartItems)
 
   // console.log(isDropdownOpen)
@@ -39,6 +40,22 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
 
   return (
     <header className="max-w-screen px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
+      {/* nabar + icon + label */}
+      {/* <nav className="flex flex-col gap-2 p-4">
+        {routeDefs.map((r) => (
+          <NavLink
+            key={r.path}
+            to={r.path}
+            className={({ isActive }) =>
+              isActive ? "font-bold text-blue-600" : "text-gray-800"
+            }
+          >
+            {r.icon} {r.label}
+          </NavLink>
+        ))}
+      </nav> */}
+      
+
       <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
@@ -108,12 +125,10 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             className="flex items-center gap-2 bg-[#808570] px-3 py-1 rounded text-black dark:text-white"
           >
             <FiShoppingCart className="w-5 h-5" />
-            {
-           
-            cartItems.length > 0 ? <span className="text-sm font-semibold">{cartItems.length}</span> : null
-            }
+            {cartItems.length > 0 ? (
+              <span className="text-sm font-semibold">{cartItems.length}</span>
+            ) : null}
             <span className="text-sm font-semibold">Cart</span>
-
           </Link>
 
           {/* Theme toggle */}
