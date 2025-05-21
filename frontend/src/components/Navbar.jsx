@@ -40,7 +40,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
 
   return (
     <header className="max-w-screen px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
-      {/* nabar + icon + label */}
+      {/* navbar + icon + label */}
       {/* <nav className="flex flex-col gap-2 p-4">
         {routeDefs.map((r) => (
           <NavLink
