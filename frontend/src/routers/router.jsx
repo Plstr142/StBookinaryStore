@@ -10,6 +10,8 @@ import Highlights from "../pages/Highlights.jsx";
 import Orders from "../pages/Orders.jsx";
 import Login from "../components/Login.jsx";
 import Register from "../components/Register.jsx";
+import CartPage from "../pages/books/CartPage.jsx";
+import CheckOutPage from "../pages/books/CheckoutPage.jsx";
 import { routeDefs } from "./showRoutes.js";
 
 const componentsMap = {
@@ -22,6 +24,8 @@ const componentsMap = {
   Highlights,
   Login,
   Register,
+  CartPage,
+  CheckOutPage,
 };
 
 const router = createBrowserRouter([

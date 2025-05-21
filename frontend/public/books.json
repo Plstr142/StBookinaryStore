@@ -7,7 +7,8 @@
     "trending": true,
     "coverImage": "TheRoadtoReact.jpg",
     "oldPrice": 22.58,
-    "newPrice": 21.99
+    "newPrice": 21.99,
+    "qty": 1
   },
   {
     "_id": 2,
@@ -17,7 +18,8 @@
     "trending": true,
     "coverImage": "ThePepRevolution.jpg",
     "oldPrice": 12.99,
-    "newPrice": 11.99
+    "newPrice": 11.99,
+    "qty": 1
   },
   {
     "_id": 3,
@@ -26,8 +28,9 @@
     "category": "sport",
     "trending": true,
     "coverImage": "NagelsmannTactital.jpg",
-    "oldPrice": 25.90,
-    "newPrice": 24.85
+    "oldPrice": 25.9,
+    "newPrice": 24.85,
+    "qty": 1
   },
   {
     "_id": 4,
@@ -37,7 +40,8 @@
     "trending": false,
     "coverImage": "PythonCrashCourse.jpg",
     "oldPrice": 37.64,
-    "newPrice": 35.19
+    "newPrice": 35.19,
+    "qty": 1
   },
   {
     "_id": 5,
@@ -47,7 +51,8 @@
     "trending": true,
     "coverImage": "WhentheCircusLeavesTown.jpg",
     "oldPrice": 16.99,
-    "newPrice": 14.87
+    "newPrice": 14.87,
+    "qty": 1
   },
   {
     "_id": 6,
@@ -57,7 +62,8 @@
     "trending": false,
     "coverImage": "TheGodfather.jpg",
     "oldPrice": 9.99,
-    "newPrice": 8.17
+    "newPrice": 8.17,
+    "qty": 1
   },
   {
     "_id": 7,
@@ -66,8 +72,9 @@
     "category": "nonfiction",
     "trending": true,
     "coverImage": "ADictionaryofComputerScience.jpg",
-    "oldPrice": 14.99, 
-    "newPrice": 13.99
+    "oldPrice": 14.99,
+    "newPrice": 13.99,
+    "qty": 1
   },
   {
     "_id": 8,
@@ -77,7 +84,8 @@
     "trending": true,
     "coverImage": "IAmPilgrim.jpg",
     "oldPrice": 10.99,
-    "newPrice": 8.99
+    "newPrice": 8.99,
+    "qty": 1
   },
   {
     "_id": 9,
@@ -87,7 +95,8 @@
     "trending": false,
     "coverImage": "HowtoCalculateQuickly.jpg",
     "oldPrice": 8.49,
-    "newPrice": 9.19
+    "newPrice": 9.19,
+    "qty": 1
   },
   {
     "_id": 10,
@@ -97,7 +106,8 @@
     "trending": true,
     "coverImage": "GardensOfTheMoon.jpg",
     "oldPrice": 9.99,
-    "newPrice": 9.29
+    "newPrice": 9.29,
+    "qty": 1
   },
   {
     "_id": 11,
@@ -107,7 +117,8 @@
     "trending": true,
     "coverImage": "TheOnceandFutureKing.jpg",
     "oldPrice": 12.99,
-    "newPrice": 11.89
+    "newPrice": 11.89,
+    "qty": 1
   },
   {
     "_id": 12,
@@ -117,7 +128,8 @@
     "trending": true,
     "coverImage": "PythonBeginner'sGuidetoArtificialIntelligence.jpg",
     "oldPrice": 34.25,
-    "newPrice": 35.24
+    "newPrice": 35.24,
+    "qty": 1
   },
   {
     "_id": 13,
@@ -127,7 +139,8 @@
     "trending": true,
     "coverImage": "IfThen.jpg",
     "oldPrice": 10.99,
-    "newPrice": 10.45
+    "newPrice": 10.45,
+    "qty": 1
   },
   {
     "_id": 14,
@@ -137,7 +150,8 @@
     "trending": false,
     "coverImage": "TheEndoftheAffair.jpg",
     "oldPrice": 9.99,
-    "newPrice": 10.24
+    "newPrice": 10.24,
+    "qty": 1
   },
   {
     "_id": 15,
@@ -147,7 +161,8 @@
     "trending": false,
     "coverImage": "MachineLearningrevisedandupdatededition.jpg",
     "oldPrice": 14.99,
-    "newPrice": 15.89
+    "newPrice": 15.89,
+    "qty": 1
   },
   {
     "_id": 16,
@@ -157,7 +172,8 @@
     "trending": false,
     "coverImage": "PythonAdvancedGuidetoArtificialIntelligence.jpg",
     "oldPrice": 36.81,
-    "newPrice": 37.68
+    "newPrice": 37.68,
+    "qty": 1
   },
   {
     "_id": 17,
@@ -166,8 +182,9 @@
     "category": "maths",
     "trending": true,
     "coverImage": "TowardsHigherMathematics.jpg",
-    "oldPrice": 36.00,
-    "newPrice": 37.24
+    "oldPrice": 36.0,
+    "newPrice": 37.24,
+    "qty": 1
   },
   {
     "_id": 18,
@@ -176,8 +193,9 @@
     "category": "programming",
     "trending": true,
     "coverImage": "MasteringNodejsWebDevelopment.jpg",
-    "oldPrice": 27.10,
-    "newPrice": 27.89
+    "oldPrice": 27.1,
+    "newPrice": 27.89,
+    "qty": 1
   },
   {
     "_id": 19,
@@ -187,7 +205,8 @@
     "trending": true,
     "coverImage": "MathTools.jpg",
     "oldPrice": 64.99,
-    "newPrice": 64.08
+    "newPrice": 64.08,
+    "qty": 1
   },
   {
     "_id": 20,
@@ -197,6 +216,7 @@
     "trending": false,
     "coverImage": "FullStackFastAPIReactandMongoDB.jpg",
     "oldPrice": 53.46,
-    "newPrice": 52.46
+    "newPrice": 52.46,
+    "qty": 1
   }
 ]

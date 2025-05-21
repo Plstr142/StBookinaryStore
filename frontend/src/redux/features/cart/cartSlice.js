@@ -43,6 +43,11 @@ const cartSlice = createSlice({
           timer: 1500,
         });
       } else {
+        // existingItem.qty += action.payload.qty;
+
+        // existingItem.totalPricePerItem =
+        //   existingItem.newPrice * existingItem.qty;
+
         Swal.fire({
           title: `<span style="color: #bcc4a1;">Already Added to the Cart</span>`,
           text: "Decision confirmed. Only forward from here.",

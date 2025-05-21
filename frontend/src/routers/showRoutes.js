@@ -42,10 +42,20 @@ export const routeDefs = [
     label: "สมัครสมาชิก",
     icon: "📝",
   },
+  {
+    path: "/cart",
+    componentName: "CartPage",
+    label: "ตะกร้าสินค้า",
+    icon: "",
+  },
+  {
+    path: "/checkout",
+    componentName: "CheckOutPage",
+    label: "ตะกร้าสินค้า",
+    icon: "",
+  },
 ];
 
 routeDefs.forEach((r) =>
-  console.log(
-    `Frontend route: ${r.path}, ${r.componentName}, ${r.label}, ${r.icon}`
-  )
+  console.log(`Frontend route: ${r.path}, ${r.componentName}, ${r.label}`)
 );
