@@ -1,34 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const CheckoutPage = () => {
-
   const cartItems = useSelector((state) => state.cart.cartItems);
 
-  const handleSubmit = () => {};
-
   const totalPrice = cartItems
-  .reduce((acc, item) => acc + item.newPrice, 0)
-  .toFixed(2);
+    .reduce((acc, item) => acc + item.newPrice, 0)
+    .toFixed(2);
+
+  const currentUser = true; //TODO: get user from auth
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+
+  const [isChecked, setIsChecked] = useState(false)
+
+  const onSubmit = (data) => console.log(data);
 
   return (
     <>
       <section>
-        <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+        <div className="py-10 bg-white shadow-top rounded-lg px-5 m-5">
           <div className="container max-w-screen-lg mx-auto">
             <div>
               <div>
                 <h2 className="font-semibold text-xl text-gray-600 mb-2">
                   Cash On Delevary
                 </h2>
-                <p className="text-gray-500 mb-2">Total Price: $0</p>
-                <p className="text-gray-500 mb-6">Items:0</p>
+                <p className="text-gray-500 mb-2">Total Price: £{totalPrice}</p>
+                <p className="text-gray-500 mb-6">
+                  Items: {cartItems.length > 0 ? cartItems.length : 0}
+                </p>
               </div>
 
               <div className="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                 <form
-                //   onSubmit={handleSubmit(onSubmit)}
+                  onSubmit={handleSubmit(onSubmit)}
                   className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3 my-8"
                 >
                   <div className="text-gray-600">
@@ -56,7 +70,7 @@ const CheckoutPage = () => {
                           id="email"
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                           disabled
-                        //   defaultValue={currentUser?.email}
+                          //   defaultValue={currentUser?.email}
                           placeholder="email@domain.com"
                         />
                       </div>
@@ -215,7 +229,7 @@ const CheckoutPage = () => {
                       <div className="md:col-span-5 text-right">
                         <div className="inline-flex items-end">
                           <button
-                            // disabled={!isChecked}
+                            disabled={!isChecked}
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                           >
                             Place an Order

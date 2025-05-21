@@ -19,7 +19,7 @@ const CartPage = () => {
   }
 
   const handleClearCart = () => {
-    dispatch(clearCart(CartPage))
+    dispatch(clearCart())
   }
 
   return (
