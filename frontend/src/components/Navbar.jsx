@@ -54,13 +54,22 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           </NavLink>
         ))}
       </nav> */}
-      
 
       <nav className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* LEFT: LOGO + SEARCH */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
           <span className="text-xl sm:text-2xl font-bold whitespace-nowrap">
-            <a href="/">StBookinary Store</a>
+            {/* <a href="/">
+              <link
+                rel="icon"
+                type="image/svg+xml"
+                href="/book-svgrepo-com.svg"
+              />
+            </a> */}
+
+            <a href="/" className="flex items-center">
+              <img src="/logoipsum-custom-logo.svg" alt="Logo" className="w-full h-6" />
+            </a>
           </span>
 
           <div className="relative w-full sm:w-72">
