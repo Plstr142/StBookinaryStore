@@ -33,7 +33,7 @@ function initServer() {
   //   res.send("StBookinary Server is running!");
   // });
 
-  // routes
+  // main api routes
   const bookRoutes = require("./src/books/book.route.js");
   app.use("/api/books", bookRoutes);
 
