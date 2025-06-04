@@ -28,6 +28,11 @@ function initServer() {
     })
   );
 
+  // get server is running
+  app.get("/", (req, res) => {
+    res.send("StBookinary Store is running!");
+  });
+
   // Middleware / Routes
   // app.use("/", (req, res) => {
   //   res.send("StBookinary Server is running!");
