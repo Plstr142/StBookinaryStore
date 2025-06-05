@@ -6,11 +6,8 @@ const Orders = () => {
   return (
      // border border-yellow-400
      <>
-      <div className="flex flex-col md:flex-row px-15 items-center py-16 gap-12 font-primary text-4xl text-bold border border-black">
-        <div className='border border-black'>Order</div>  
-      {/* 
-        <Banner />
-        <TopSales /> */}
+      <div className="py-10 bg-white shadow-top rounded-lg px-5 m-5">
+        <div className='text-xl'>Order</div>          
       </div>
      </>
   )

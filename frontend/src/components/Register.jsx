@@ -11,6 +11,7 @@ const Register = () => {
 
   const [message, setMessage] = useState("")
   const {registerUser} = useAuth()
+  console.log(registerUser)
 
   const {
     register,
@@ -20,13 +21,14 @@ const Register = () => {
   } = useForm()
 
   // register user   
-  const onSubmit = async (data) => {
-    console.log(data)
+  const onSubmit = async(data) => {
+    // console.log(data)
     try{
       await registerUser(data.email, data.password);
       alert("User registered successfully!")
     } catch(error) {
       setMessage("Please provide a valid email and password")
+      console.error(error)
     }
   }
 

@@ -94,10 +94,6 @@ function App() {
           {/* mx-auto px-4 py-6 */}
           <main className="min-h-screen max-w-screen">
             <Outlet />
-
-            {/* card , button */}
-            <Card />
-            <Button />
           </main>
 
           <Footer />
