@@ -11,6 +11,7 @@ import { FiHeart } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import avatarImg from "../assets/avatar_user.png";
 import { useSelector } from "react-redux";
+import { useAuth } from "../context/AuthContext";
 // import { NavLink } from "react-router-dom";
 // import { routeDefs } from "../routers/showRoutes";
 
@@ -35,8 +36,16 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
 
   // console.log(isDropdownOpen)
 
+
+  const {currentUser, logout} = useAuth()
+
+  const handleLogOut = () => {
+    logout()
+  }
+
+
   // false = disable profile (profile user dropdown)
-  const currentUser = false;
+  // const currentUser = false;
 
   return (
     <header className="max-w-screen px-4 sm:px-6 lg:px-8 py-6 bg-[#bcc4a1]">
@@ -98,7 +107,8 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                   />
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute xs:right-2 md:right-1 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                  // absolute xs:right-2 md:right-1 mt-2 w-48 bg-white shadow-lg rounded-md z-40  
+                  <div className="absolute lg:block md:hidden mt-4 bg-black dark:bg-white shadow-md rounded-lg p-4 w-50 md:right-2 xs:right-1 z-45">
                     <ul className="py-2">
                       {navigation.map((item) => (
                         <li
@@ -107,12 +117,17 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                         >
                           <Link
                             to={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            // block px-4 py-2 text-sm hover:bg-gray-100
+                            className="block px-4 py-2 text-gray-100 hover:bg-[#808570] rounded dark:text-black"
                           >
                             {item.name}
                           </Link>
                         </li>
                       ))}
+
+                      <li>
+                        <Link onClick={handleLogOut} className="block px-4 py-2 text-gray-100 hover:bg-[#808570] rounded dark:text-black">Logout</Link>
+                      </li>
                     </ul>
                   </div>
                 )}

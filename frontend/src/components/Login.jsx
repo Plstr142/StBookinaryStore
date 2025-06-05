@@ -9,7 +9,7 @@ import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [message, setMessage] = useState("")
-  const {loginUser} = useAuth()
+  const {loginUser, signInWithGoogle} = useAuth()
   const navigate = useNavigate()  
   console.log(loginUser)
   const {
@@ -30,8 +30,15 @@ const Login = () => {
     }
   }
 
-  const handleGoogleSignIn = () => {
-
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      alert("Login successful!")
+      navigate("/")
+    } catch (error) {
+      alert("Google sign in failed!")
+      console.error(error)
+    }
   }
 
 

@@ -10,7 +10,7 @@ import { useAuth } from "../context/AuthContext";
 const Register = () => {
 
   const [message, setMessage] = useState("")
-  const {registerUser} = useAuth()
+  const {registerUser, signInWithGoogle} = useAuth()
   console.log(registerUser)
 
   const {
@@ -33,8 +33,15 @@ const Register = () => {
   }
 
 
-  const handleGoogleSignIn = () => {
-
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      alert("Login successful!")
+      navigate("/")
+    } catch (error) {
+      alert("Google sign in failed!")
+      console.error(error)
+    }
   }
 
   return (
