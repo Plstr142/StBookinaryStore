@@ -62,6 +62,7 @@ import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { Outlet } from "react-router-dom";
 import Orders from "./pages/Orders.jsx";
+import { AuthProvide } from "./context/AuthContext.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -84,22 +85,25 @@ function App() {
   // const isNotFoundPage = !["/", "/about", "/contact", "/fiction", "/nonfiction" ,"/hightlights"].includes(path);
 
   return (
-    // min-h-screen
-    <div className="bg-gray-100 dark:bg-black text-black dark:text-white transition-all duration-300">
- 
-      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+    <>
+      <AuthProvide>
+        {/* min-h-screen */}
+        <div className="bg-gray-100 dark:bg-black text-black dark:text-white transition-all duration-300">
+          <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
-      {/* mx-auto px-4 py-6 */}
-      <main className="min-h-screen max-w-screen">
-      <Outlet />
+          {/* mx-auto px-4 py-6 */}
+          <main className="min-h-screen max-w-screen">
+            <Outlet />
 
-      {/* card , button */}
-      <Card />
-      <Button />
-      </main>
+            {/* card , button */}
+            <Card />
+            <Button />
+          </main>
 
-      <Footer />
-    </div>
+          <Footer />
+        </div>
+      </AuthProvide>
+    </>
   );
 }
 

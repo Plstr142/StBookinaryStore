@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form"
+import { useAuth } from "../context/AuthContext";
 
 
 const Register = () => {
 
   const [message, setMessage] = useState("")
+  const {registerUser} = useAuth()
 
   const {
     register,
@@ -17,7 +19,17 @@ const Register = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  // register user   
+  const onSubmit = async (data) => {
+    console.log(data)
+    try{
+      await registerUser(data.email, data.password);
+      alert("User registered successfully!")
+    } catch(error) {
+      setMessage("Please provide a valid email and password")
+    }
+  }
+
 
   const handleGoogleSignIn = () => {
 
@@ -25,7 +37,7 @@ const Register = () => {
 
   return (
     <div className="relative mx-5 my-5">
-      <div className="h-[calc(100vh-120px)] flex justify-center items-center border border-green-400">
+      <div className="h-[calc(100vh-120px)] flex justify-center items-center">
         <div className="w-full max-w-lg mx-auto bg-gray-100 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
           <h2 className="text-2xl font-bold my-6 text-black dark:text-black text-center">
             Create a new account
