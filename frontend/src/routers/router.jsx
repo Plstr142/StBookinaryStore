@@ -13,6 +13,7 @@ import Register from "../components/Register.jsx";
 import CartPage from "../pages/books/CartPage.jsx";
 import CheckOutPage from "../pages/books/CheckoutPage.jsx";
 import { routeDefs } from "./showRoutes.js";
+import SingleBook from "../pages/books/SingleBook.jsx";
 
 const componentsMap = {
   Home,
@@ -26,6 +27,7 @@ const componentsMap = {
   Register,
   CartPage,
   CheckOutPage,
+  SingleBook
 };
 
 const router = createBrowserRouter([

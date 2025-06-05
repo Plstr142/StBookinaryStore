@@ -23,9 +23,8 @@ const TopSellers = () => {
   const [selectedCategory, setSelectedCategory] = useState("Choose a genre");
 
 
-  const {data: books} = useFetchAllBooksQuery();
-  //clg books
-  console.log(books)
+  const {data: books = []} = useFetchAllBooksQuery();
+  // console.log(books)
 
   // fiteredbooks
   const filteredBooks =

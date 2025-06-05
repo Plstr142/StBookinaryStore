@@ -51,7 +51,13 @@ export const routeDefs = [
   {
     path: "/checkout",
     componentName: "CheckOutPage",
-    label: "ตะกร้าสินค้า",
+    label: "ชำระเงิน",
+    icon: "",
+  },
+  {
+    path: "/books/:id",
+    componentName: "SingleBook",
+    label: "หนังสือหนึ่งเล่ม",
     icon: "",
   },
 ];
