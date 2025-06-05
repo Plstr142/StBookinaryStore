@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 // import '../assets/css/Login.css'
 import { useForm } from "react-hook-form"
-
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [message, setMessage] = useState("")
-
+  const {loginUser} = useAuth()
+  const navigate = useNavigate()  
+  console.log(loginUser)
   const {
     register,
     handleSubmit,
@@ -17,7 +19,16 @@ const Login = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      await loginUser(data.email, data.password); 
+      alert("Login Successful!");
+      navigate("/")
+    } catch (error) { 
+      setMessage("Please provide a valid email and password")
+      console.error(error)
+    }
+  }
 
   const handleGoogleSignIn = () => {
 
@@ -26,7 +37,7 @@ const Login = () => {
 
   return (
     <div className="relative mx-5 my-5">
-      <div className="h-[calc(100vh-120px)] flex justify-center items-center border border-green-400">
+      <div className="h-[calc(100vh-120px)] flex justify-center items-center">
         <div className="w-full max-w-lg mx-auto bg-gray-100 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
           <h2 className="text-2xl font-bold my-6 text-black dark:text-black text-center">
             Login to StBookinary Store
