@@ -67,9 +67,10 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               />
             </a> */}
 
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <img src="/logoipsum-custom-logo.svg" alt="Logo" className="w-full h-6" />
-            </a>
+            </Link>
+
           </span>
 
           <div className="relative w-full sm:w-72">
