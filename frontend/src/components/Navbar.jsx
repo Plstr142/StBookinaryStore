@@ -52,7 +52,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
       {/* navbar + icon + label */}
       {/* <nav className="flex flex-col gap-2 p-4">
         {routeDefs.map((r) => (
-          <NavLink
+          <NavLink>
             key={r.path}
             to={r.path}
             className={({ isActive }) =>

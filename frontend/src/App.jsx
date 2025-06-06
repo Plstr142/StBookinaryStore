@@ -47,7 +47,6 @@
 
 // export default App;
 
-import Aj from "./pages/Aj.jsx";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
