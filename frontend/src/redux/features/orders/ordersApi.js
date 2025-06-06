@@ -20,6 +20,6 @@ const ordersApi = createApi({
   }),
 });
 
-export const { useCreateOrderMutation } = createApi;
+export const { useCreateOrderMutation } = ordersApi;
 
 export default ordersApi;
