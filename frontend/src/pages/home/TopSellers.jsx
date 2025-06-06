@@ -6,8 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/global.css";
-import { useFetchAllBooksQuery } from "../../redux/features/cart/booksApi";
-
+import { useFetchAllBooksQuery } from "../../redux/features/books/booksApi";
 
 // genre
 const categories = [
