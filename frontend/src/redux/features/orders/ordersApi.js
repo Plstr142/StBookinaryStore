@@ -4,7 +4,7 @@ import getBaseUrl from "../../../utils/baseUrl";
 const ordersApi = createApi({
   reducerPath: "ordersApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${getBaseUrl()}/ api / orders`,
+    baseUrl: `${getBaseUrl()}/api/orders`,
     credentials: "include",
   }),
   tagTypes: ["Orders"],
