@@ -83,7 +83,7 @@ const CheckoutPage = () => {
                           id="email"
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                           disabled
-                          // defaultValue={currentUser?.email}
+                          defaultValue={currentUser?.email}
                           placeholder="email@domain.com"
                         />
                       </div>
