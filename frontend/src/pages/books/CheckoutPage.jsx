@@ -33,7 +33,7 @@ const CheckoutPage = () => {
       productIds: cartItems.map(item => item?._id),
       totalPrice: totalPrice,
     }
-    
+    // console.log(newOrder)
     try {
       // await 
     } catch (error) {

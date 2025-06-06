@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "@/global.css";
 import { useFetchAllBooksQuery } from "../../redux/features/books/booksApi";
 
+
 // genre
 const categories = [
   "Choose a genre",
