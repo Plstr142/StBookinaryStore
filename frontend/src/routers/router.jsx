@@ -16,6 +16,7 @@ import Fiction from "../pages/Fiction.jsx";
 import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
 import About from "../pages/About.jsx";
+import AdminRoute from "./AdminRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,32 @@ const router = createBrowserRouter([
     
     ],
   },
+  {
+    path: "/admin",
+    element: <div>Admin Login</div>
+  },
+  {
+    path: "/dashboard",
+    element: <AdminRoute><div>Admin Dashboard</div></AdminRoute>,
+    children: [
+      {
+        path: "",
+        element: <AdminRoute><div>Dashboard Home</div></AdminRoute>,
+      },
+      {
+        path: "add-new-book",
+        element: <AdminRoute><div>Add New Book</div></AdminRoute>,
+      },
+      {
+        path: "edit-book/:id",
+        element: <AdminRoute><div>Edit Book</div></AdminRoute>,
+      },
+      {
+        path: "manage-books",
+        element: <AdminRoute><div>Manage Books</div></AdminRoute>,
+      },
+    ]
+  }
 ]);
 
 export default router;
