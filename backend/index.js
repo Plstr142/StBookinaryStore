@@ -41,9 +41,11 @@ function initServer() {
   // main api routes
   const bookRoutes = require("./src/books/book.route.js");
   const orderRoutes = require("./src/orders/order.route.js");
+  const userRoutes = require("./src/users/user.route.js");
 
   app.use("/api/books", bookRoutes);
   app.use("/api/orders", orderRoutes);
+  app.use("/api/auth", userRoutes);
 
   // Start server
   app.listen(port, () => {
