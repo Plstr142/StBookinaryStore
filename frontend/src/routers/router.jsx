@@ -17,6 +17,7 @@ import NonFiction from "../pages/Nonfiction.jsx";
 import Highlights from "../pages/Highlights.jsx";
 import About from "../pages/About.jsx";
 import AdminRoute from "./AdminRoute.jsx";
+import AdminLogin from "../components/AdminLogin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -84,7 +85,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <div>Admin Login</div>
+    element: <AdminLogin/>
   },
   {
     path: "/dashboard",
