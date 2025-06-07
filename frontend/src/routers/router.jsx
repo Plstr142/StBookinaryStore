@@ -8,7 +8,8 @@ import Register from "../components/Register.jsx";
 import CartPage from "../pages/books/CartPage.jsx";
 import CheckoutPage from "../pages/books/CheckoutPage.jsx";
 import SingleBook from "../pages/books/SingleBook.jsx";
-import OrderPage from "../pages/Orders.jsx";
+import OrderPage from "../pages/books/OrderPage.jsx";
+
 
 import Contact from "../pages/Contact.jsx";
 import Fiction from "../pages/Fiction.jsx";
