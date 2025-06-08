@@ -29,7 +29,8 @@ const booksApi = createApi({
     }),
     fetchBookById: builder.query({
       query: (id) => `/${id}`,
-      providesTags: (results, error, id) => [{ type: "Books", id }],
+      // เดิม results
+      providesTags: (result, error, id) => [{ type: "Books", id }],
     }),
     addBook: builder.mutation({
       query: (newBook) => ({

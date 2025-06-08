@@ -1,31 +1,71 @@
-import React, { useState } from 'react'
-import InputField from './InputField'
-import SelectField from './SelectField'
+import React, { useEffect, useState } from 'react'
+
+import SelectField from './SelectField';
+import InputField from './InputField';
 import { useForm } from 'react-hook-form'
 import { useAddBookMutation } from '../../../redux/features/books/booksApi'
+import Swal from 'sweetalert2'
 
 const AddBook = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [imageFile, setimageFile] = useState(null);
-    const [addBook, {isLoading, isError}] = useAddBookMutation();
     const [imageFileName, setimageFileName] = useState('');
-    const onSubmit = async(data) => {
-        
+    const [addBook, { isLoading, isError }] = useAddBookMutation();
+    const [previewUrl, setPreviewUrl] = useState('');
+
+    const onSubmit = async (data) => {
+
         const newBookData = {
             ...data,
             coverImage: imageFileName
         }
         console.log(newBookData)
+
+        // const newBookData = Object.assign({}, data, { coverImage: imageFileName });
+
+        try {
+            await addBook(newBookData).unwrap();
+            Swal.fire({
+                title: `<span style="color: #bcc4a1;">Book added</span>`,
+                text: "Your book is uploaded successfully!",
+                icon: "success",
+                iconColor: "#808570",
+                showCancelButton: true,
+                confirmButtonColor: "#808570",
+                cancelButtonColor: "#000",
+                confirmButtonText: "Yes, It's Okay!",
+                customClass: {
+                    confirmButton: "swal2-confirm",
+                    cancelButton: "swal2-cancel",
+                },
+            });
+            reset();
+            setimageFile(null);
+            setimageFileName('')
+            setPreviewUrl(null);
+        } catch (error) {
+            console.error(error)
+            alert("Failed to add Book. Please try again.")
+        }
     }
 
     const handleFileChange = (e) => {
-        const File = e.target.files[0];
-        if(file) {
+        const file = e.target.files[0];
+        if (file) {
             setimageFile(file);
             setimageFileName(file.name);
+            setPreviewUrl(URL.createObjectURL(file));
         }
-    }    
-    
+    }
+
+    useEffect(() => {
+        return () => {
+            if (previewUrl) URL.revokeObjectURL(previewUrl);
+        };
+    }, [previewUrl]);
+
+
+
     return (
         <>
             <div className="max-w-lg   mx-auto md:p-6 p-3 bg-white rounded-lg shadow-md">
@@ -57,11 +97,11 @@ const AddBook = () => {
                         name="category"
                         options={[
                             { value: '', label: 'Choose A Category' },
-                            { value: 'business', label: 'Business' },
-                            { value: 'technology', label: 'Technology' },
-                            { value: 'fiction', label: 'Fiction' },
-                            { value: 'horror', label: 'Horror' },
-                            { value: 'adventure', label: 'Adventure' },
+                            { value: 'programming', label: 'programming' },
+                            { value: 'nonfiction', label: 'nonfiction' },
+                            { value: 'fiction', label: 'fiction' },
+                            { value: 'maths', label: 'maths' },
+                            { value: 'sport', label: 'sport' },
                             // Add more options as needed
                         ]}
                         register={register}
@@ -84,6 +124,7 @@ const AddBook = () => {
                         label="Old Price"
                         name="oldPrice"
                         type="number"
+                        step="any"
                         placeholder="Old Price"
                         register={register}
 
@@ -94,6 +135,7 @@ const AddBook = () => {
                         label="New Price"
                         name="newPrice"
                         type="number"
+                        step="any"
                         placeholder="New Price"
                         register={register}
 
@@ -104,10 +146,17 @@ const AddBook = () => {
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Cover Image</label>
                         <input type="file" accept="image/*" onChange={handleFileChange} className="mb-2 w-full" />
                         {imageFileName && <p className="text-sm text-gray-500">Selected: {imageFileName}</p>}
+                        {previewUrl && (
+                            <img
+                                src={previewUrl}
+                                alt="Preview"
+                                className="mt-2 w-32 h-auto object-cover rounded border border-gray-300 shadow-sm "
+                            />
+                        )}
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit" className="w-full py-2 bg-green-500 text-white font-bold rounded-md">
+                    <button type="submit" className="w-full py-2 bg-black text-white hover:text-black hover:bg-white focus:bg-black focus:text-white font-bold rounded-md">
                         {
                             isLoading ? <span className="">Adding.. </span> : <span>Add Book</span>
                         }
@@ -119,3 +168,7 @@ const AddBook = () => {
 }
 
 export default AddBook
+
+
+
+

@@ -12,6 +12,7 @@ const Dashboard = () => {
     const [data, setData] = useState({});
     console.log(data)
     const navigate = useNavigate();
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -30,6 +31,7 @@ const Dashboard = () => {
         }
 
         fetchData();
+        
     }, []);
 
     console.log(data)

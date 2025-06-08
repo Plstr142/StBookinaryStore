@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-import events1 from "../../assets/events/news-1.png";
-import events2 from "../../assets/events/news-2.png";
-import events3 from "../../assets/events/news-3.png";
-import events4 from "../../assets/events/news-4.png";
+import events1 from "../../assets/events/DaniDiazDreamover.jpg";
+import events2 from "../../assets/events/JackFordBeyondThisPlaceofWrathAndTears.jpg";
+import events3 from "../../assets/events/JonMcGoranThePriceofEverything.jpg";
+import events4 from "../../assets/events/LauraLippmanMurderTakesAVacation.jpg";
 
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
@@ -20,30 +20,30 @@ import "@/global.css";
 const events = [
   {
     id: 1,
-    title: "Global Climate Summit Calls for Urgent Action",
+    title: "Dani Diaz | Dreamover",
     description:
-      "World leaders gather at the Global Climate Summit to discuss urgent strategies to combat climate change, focusing on reducing carbon emissions and fostering renewable energy solutions.",
+      "A heartfelt YA graphic novel about two best friends whose first love and shared dreams blur the line between reality and fantasy—until one magical sleepover changes everything.",
     image: events1,
   },
   {
     id: 2,
-    title: "Breakthrough in AI Technology Announced",
+    title: "Jack Ford | Beyond This Place of Wrath And Tears",
     description:
-      "A major breakthrough in artificial intelligence has been announced by researchers, with new advancements promising to revolutionize industries from healthcare to finance.",
+      "A gripping dual-timeline novel following fearless journalist Lee Carson as she breaks barriers reporting from WWII front lines and uncovers Cold War espionage, blending historical drama and suspense for fans of Kate Quinn and Ariel Lawhon.",
     image: events2,
   },
   {
     id: 3,
-    title: "New Space Mission Aims to Explore Distant Galaxies",
+    title: "Jon McGoran | The Price of Everything",
     description:
-      "NASA has unveiled plans for a new space mission that will aim to explore distant galaxies, with hopes of uncovering insights into the origins of the universe.",
+      "A high-octane cyberpunk thriller where elite courier Armand Pierce must outrun his own ruthless Guild after a missing package puts him at the center of a deadly conspiracy that could shatter the post-internet world order.",
     image: events3,
   },
   {
     id: 4,
-    title: "Stock Markets Reach Record Highs Amid Economic Recovery",
+    title: "Laura Lippman | Murder Takes A Vacation",
     description:
-      "Global stock markets have reached record highs as signs of economic recovery continue to emerge following the challenges posed by the global pandemic.",
+      "Join bestselling author Laura Lippman for a lively discussion of Murder Takes a Vacation, a witty mystery where a Paris river cruise turns deadly and only retired PI Muriel Blossom can crack the case.",
     image: events4,
   },
 ];
