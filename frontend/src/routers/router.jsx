@@ -18,6 +18,8 @@ import Highlights from "../pages/Highlights.jsx";
 import About from "../pages/About.jsx";
 import AdminRoute from "./AdminRoute.jsx";
 import AdminLogin from "../components/AdminLogin.jsx";
+import DashboardLayout from "../pages/dashboard/DashboardLayout.jsx";
+import Dashboard from "../pages/dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -89,11 +91,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <AdminRoute><div>Admin Dashboard</div></AdminRoute>,
+    element: <AdminRoute><DashboardLayout/></AdminRoute>,
     children: [
       {
         path: "",
-        element: <AdminRoute><div>Dashboard Home</div></AdminRoute>,
+        element: <AdminRoute><Dashboard /></AdminRoute>,
       },
       {
         path: "add-new-book",
