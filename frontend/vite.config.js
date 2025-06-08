@@ -5,11 +5,6 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // server: {
-  //   hmr: {
-  //     overlay: true,
-  //   },
-  // },
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
