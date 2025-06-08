@@ -40,8 +40,8 @@ const AddBook = () => {
                 },
             });
             reset();
-            setimageFile(null);
             setimageFileName('')
+            setimageFile(null);
             setPreviewUrl(null);
         } catch (error) {
             console.error(error)
@@ -124,7 +124,6 @@ const AddBook = () => {
                         label="Old Price"
                         name="oldPrice"
                         type="number"
-                        step="any"
                         placeholder="Old Price"
                         register={register}
 
@@ -135,7 +134,6 @@ const AddBook = () => {
                         label="New Price"
                         name="newPrice"
                         type="number"
-                        step="any"
                         placeholder="New Price"
                         register={register}
 
@@ -144,7 +142,7 @@ const AddBook = () => {
                     {/* Cover Image Upload */}
                     <div className="mb-4">
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Cover Image</label>
-                        <input type="file" accept="image/*" onChange={handleFileChange} className="mb-2 w-full" />
+                        <input type="file" accept="image" onChange={handleFileChange} className="mb-2 w-full" />
                         {imageFileName && <p className="text-sm text-gray-500">Selected: {imageFileName}</p>}
                         {previewUrl && (
                             <img
