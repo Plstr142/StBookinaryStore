@@ -9,7 +9,7 @@ require("dotenv").config();
 // Connect to MongoDB
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("MongoDB connected successfully");
   } catch (err) {
     console.error("Failed to connect to MongoDB:", err);
@@ -23,7 +23,10 @@ function initServer() {
   app.use(express.json());
   app.use(
     cors({
-      origin: ["http://localhost:5173"],
+      origin: [
+        "http://localhost:5173",
+        "https://stbookinarystore-app-frontend.vercel.app",
+      ],
       credentials: true,
     })
   );

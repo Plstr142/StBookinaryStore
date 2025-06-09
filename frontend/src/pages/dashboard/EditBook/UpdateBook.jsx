@@ -7,7 +7,8 @@ import { useFetchBookByIdQuery, useUpdateBookMutation } from '../../../redux/fea
 import Loading from '../../../components/Loading'
 import Swal from 'sweetalert2'
 import axios from 'axios'
-import getBaseUrl from '../../../utils/baseUrl'
+import getBaseUrl from '../../../utils/baseURL'
+
 
 const UpdateBook = () => {
     const { id } = useParams();
@@ -43,7 +44,7 @@ const UpdateBook = () => {
                 }
             });
             Swal.fire({
-                title: `<span style="color: #bcc4a1;">Book Updated/span>`,
+                title: `<span style="color: #bcc4a1;">Book Updated</span>`,
                 text: "Your book is updated successfully!",
                 icon: "success",
                 iconColor: "#808570",
