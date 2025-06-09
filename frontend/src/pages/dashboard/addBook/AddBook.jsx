@@ -10,8 +10,8 @@ const AddBook = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [imageFile, setimageFile] = useState(null);
     const [imageFileName, setimageFileName] = useState('');
-    const [addBook, { isLoading, isError }] = useAddBookMutation();
     const [previewUrl, setPreviewUrl] = useState('');
+    const [addBook, { isLoading, isError }] = useAddBookMutation();
 
     const onSubmit = async (data) => {
 
@@ -21,9 +21,8 @@ const AddBook = () => {
         }
         console.log(newBookData)
 
-        // const newBookData = Object.assign({}, data, { coverImage: imageFileName });
-
         try {
+            // axios เพิ่ม
             await addBook(newBookData).unwrap();
             Swal.fire({
                 title: `<span style="color: #bcc4a1;">Book added</span>`,
