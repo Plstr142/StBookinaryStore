@@ -55,6 +55,11 @@ const AddBook = () => {
             setimageFileName(file.name);
             setPreviewUrl(URL.createObjectURL(file));
         }
+        else {
+            setimageFile(null);
+            setimageFileName('');
+            setPreviewUrl(null);
+        }
     }
 
     useEffect(() => {
@@ -143,11 +148,32 @@ const AddBook = () => {
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Cover Image</label>
                         <input type="file" accept="image" onChange={handleFileChange} className="mb-2 w-full" />
                         {imageFileName && <p className="text-sm text-gray-500">Selected: {imageFileName}</p>}
-                        {previewUrl && (
+                        {/* {previewUrl && (
                             <img
                                 src={previewUrl}
                                 alt="Preview"
                                 className="mt-2 w-32 h-auto object-cover rounded border border-gray-300 shadow-sm "
+                            />
+                        )} */}
+{/* 
+                        {previewUrl
+                            ? (
+                                <img
+                                    src={previewUrl}
+                                    alt="Preview"
+                                    className="mt-2 w-32 h-auto object-cover rounded border border-gray-300 shadow-sm"
+                                />
+                            )
+                            : (
+                                <p className="text-sm italic text-gray-400">No image selected</p>
+                            )
+                        } */}
+
+                        {typeof previewUrl === 'string' && previewUrl !== '' && (
+                            <img
+                                src={previewUrl}
+                                alt="Preview"
+                                className="mt-2 w-32 h-auto object-cover rounded border border-gray-300 shadow-sm"
                             />
                         )}
                     </div>

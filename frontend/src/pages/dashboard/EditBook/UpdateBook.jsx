@@ -133,7 +133,7 @@ const UpdateBook = () => {
                     register={register}
                 />
 
-                <button type="submit" className="w-full py-2 bg-blue-500 text-white font-bold rounded-md">
+                <button type="submit" className="w-full py-2 bg-black text-white hover:text-black hover:bg-white focus:bg-black focus:text-white font-bold rounded-md">
                     Update Book
                 </button>
             </form>
